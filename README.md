@@ -1,4 +1,4 @@
-# Gen-QER: 生成的クエリ拡張とリランキング
+# Gen-QER（Generative Query Expansion & Reranking）: 生成的クエリ拡張とリランキング
 
 [English](#english) | [日本語](#japanese)
 
