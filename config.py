@@ -9,7 +9,7 @@ def parse_args():
     
     # Document Generation Settings
     parser.add_argument('--llm', type=str, default='gpt-4o', help='Pseudo reference generation model (gpt, 01-ai, Qwen, etc.)')
-    parser.add_argument('--doc_gen', type=int, default=2, help='Number of generated documents (n)')
+    parser.add_argument('--doc_gen', type=int, default=5, help='Number of generated documents (n)')
     parser.add_argument('--output_path', type=str, default='./exp', help='Output directory path')
     
     # Sparse Retrieval (BM25) Settings

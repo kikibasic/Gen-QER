@@ -12,7 +12,7 @@ class PromptManager:
     @staticmethod
     def get_strict_constraint_prompt(query):
         """
-        制約条件と具体的回答を強制する改良プロンプト
+        改良したプロンプト
         """
         system_instruction = (
             "You are an expert search assistant designed to provide precise, direct, and high-quality passages for information retrieval. "
