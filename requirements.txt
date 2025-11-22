@@ -1,0 +1,21 @@
+# --- CUDA対応 PyTorch (重要) ---
+--extra-index-url https://download.pytorch.org/whl/cu121
+
+# --- AI & Deep Learning ---
+torch==2.5.1+cu121
+torchvision==0.20.1+cu121
+torchaudio==2.5.1+cu121
+transformers==4.56.0
+sentencepiece==0.2.1
+protobuf==6.32.0
+
+# --- Retrieval & Generation ---
+pyserini==1.2.0
+openai==1.108.2
+tiktoken==0.11.0
+
+# --- Utilities ---
+pandas==2.3.2
+scikit-learn==1.7.1
+tqdm==4.67.1
+gdown==5.2.0

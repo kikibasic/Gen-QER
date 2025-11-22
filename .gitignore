@@ -1,0 +1,37 @@
+# --- Python / Environment ---
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+env/
+venv/
+.venv/
+*.env
+
+# --- IDE Settings (VS Code etc) ---
+.vscode/
+.idea/
+*.swp
+
+# --- Gen-QER Specific Outputs ---
+# 実験結果（JSON）やダウンロードしたデータセットは除外
+exp/
+
+# 評価結果のRUNファイルやログは除外するが、
+# 最終スコア（mugipipeline.json）だけはGitで管理する
+results/
+!results/mugipipeline.json
+
+# --- System / Large Files ---
+.DS_Store
+Thumbs.db
+*.tar.gz
+*.zip
+
+# --- Logs ---
+*.log
+slurm_logs/
+
+# --- Pyserini / HuggingFace Caches ---
+indexes/
+cache/
