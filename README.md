@@ -21,9 +21,9 @@
 **必要環境:** Python 3.10以上、Java 11以上 (Pyseriniに必要)
 
 ```bash
-# 1. 仮想環境の作成 (Condaを推奨)
-conda create -n gen-qer python=3.10 openjdk=11 -c conda-forge -y
-conda activate gen-qer
+# 1. 仮想環境の作成
+venv .venv
+.venv/Scripts/Activate.ps1
 
 # 2. Python依存パッケージのインストール
 pip install -r requirements.txt
