@@ -64,16 +64,16 @@ python main.py \
 
 ### 📂 プロジェクト構造
 
-- **main.py**: パイプラインのメインエントリーポイント。検索から評価までのワークフローを処理
-- **config.py**: コマンドライン引数とデフォルト設定を処理
+- **main.py**: 検索から評価までの全工程を実行する
+- **config.py**: 実験のパラメータ設定やコマンドライン引数を管理
 - **src/**: ソースコードモジュール
-  - **prompts.py**: LLM生成用のプロンプトテンプレートを定義
-  - **retriever.py**: 密ベクトルリランキングロジックを実装 (コンテキスト化プーリングを含む)
-  - **generator.py**: OpenAIとHuggingFaceモデルのラッパークラス
-  - **searcher.py**: スパース検索 (Pyserini/BM25) とクエリ拡張ループを処理
-  - **evaluation.py**: trec_evalの実行とメトリクス計算のユーティリティ
-- **exp/**: 中間結果を保存 (検索結果と生成テキストを含むJSONファイル)
-- **results/**: 最終評価結果 (TREC実行ファイル) とサマリーログ (mugipipeline.json) を保存
+  - **prompts.py**: 疑似参照文生成用のプロンプトを定義
+  - **retriever.py**: リランキングを行う
+  - **generator.py**: OpenAIやHuggingFaceのモデルを統一的に扱う
+  - **searcher.py**: BM25による初期検索とクエリ拡張のループ処理を実行
+  - **evaluation.py**: 検索精度の評価（nDCG算出など）
+- **exp/**: 検索結果や生成テキストを含む詳細な実験ログ（JSON）の保存先
+- **results/**: 最終的な評価スコアの集計ファイルやTREC形式データの保存先
 
 ---
 
