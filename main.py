@@ -26,7 +26,7 @@ def main(args):
             return
 
     # データセット
-    data_list = ['dl19', 'dl20'] 
+    data_list = ['dl20', 'dl19', 'covid', 'nfc' ,'touche', 'dbpedia', 'scifact', 'signal', 'news', 'robust04'] #data_list = ['dl20', 'dl19', 'covid', 'nfc' ,'touche', 'dbpedia', 'scifact', 'signal', 'news', 'robust04']
 
     for dataset in data_list:
         logging.info(f"#" * 30)
