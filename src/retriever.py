@@ -78,7 +78,7 @@ class NeuralRetriever:
             
             # Top-10 取得
             _, indices = scores.topk(min(10, len(docs)), dim=1)
-            selected_doc_ids = [docs_idx[i] for i in indices.squeeze().tolist()]
+            selected_doc_ids = [docs_idx[i] for i in indices.reshape(-1).tolist()]
             
             # QIDをキーに保存
             qid = item['hits'][0]['qid'] if item['hits'] else item.get('qid')

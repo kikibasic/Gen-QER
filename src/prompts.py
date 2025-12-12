@@ -5,7 +5,7 @@ class PromptManager:
     def get_prompt(query, type='gen'):
         if type == 'gen':
             # デフォルトでZero-shotを使用
-            return PromptManager.get_strict_constraint_prompt(query)
+            return PromptManager.get_legacy_zs_prompt(query)
         else:
             raise NotImplementedError(f"Template type {type} is not implemented.")
 

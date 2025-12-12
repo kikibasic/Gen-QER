@@ -9,7 +9,7 @@ def parse_args():
     
     # Document Generation Settings
     parser.add_argument('--llm', type=str, default='gpt-4o', help='Pseudo reference generation model (gpt, 01-ai, Qwen, etc.)')
-    parser.add_argument('--doc_gen', type=int, default=0, help='Number of generated documents (n)')
+    parser.add_argument('--doc_gen', type=int, default=5, help='Number of generated documents (n)')
     parser.add_argument('--output_path', type=str, default='./exp', help='Output directory path')
     
     # Sparse Retrieval (BM25) Settings
@@ -23,7 +23,7 @@ def parse_args():
                         help='HuggingFace model name for dense retrieval/reranking')
     parser.add_argument('--dense_topk', type=int, default=100, help='Number of documents to rerank')
     
-    # ★独自性: contex-pool を追加
+    # contex-pool を追加
     parser.add_argument('--mode', type=str, 
                         choices=['query', 'alternate', 'concat', 'qg', 'contex-pool'], 
                         default='contex-pool',
